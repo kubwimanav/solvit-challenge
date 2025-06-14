@@ -314,9 +314,9 @@ class ExpenseTracker {
 
   // Format currency
   formatCurrency(amount) {
-    return new Intl.NumberFormat("Rwf", {
+    return new Intl.NumberFormat("en-US", {
       style: "currency",
-      currency: "Rw",
+      currency: "RWF",
     }).format(amount);
   }
 
