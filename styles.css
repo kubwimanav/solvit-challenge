@@ -1,0 +1,387 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+background-color: #eaf6f6;
+  padding: 1rem;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fcfefe;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header Styles */
+header {
+  color: black;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #e1e8ed;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 0.7rem;
+}
+
+/* Main Content */
+main {
+  padding: 1rem;
+}
+
+/* Balance Section */
+.balance-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.balance-card {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.balance-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.balance-card .amount {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.income-card {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.expense-card {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+/* Form Section */
+.form-section {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
+
+.form-section h1 {
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 0.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.input-group input,
+.input-group select {
+  padding: 0.75rem;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Buttons */
+.btn {
+  background: #66bfbf;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #edddbd;
+}
+
+.btn-cancel {
+  background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+  margin-left: 0.5rem;
+}
+
+.btn-cancel:hover {
+  box-shadow: 0 8px 25px rgba(149, 165, 166, 0.3);
+}
+
+.btn-small {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.7rem;
+  border-radius: 6px;
+}
+
+.btn-edit {
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+}
+
+.btn-delete {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+/* Expenses Section */
+.expenses-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 1rem;
+}
+
+.expenses-section h2 {
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 2rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 0.5rem;
+  border: 2px solid #e1e8ed;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+/* Expenses List */
+.expenses-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.expense-item {
+  background: white;
+  border: 2px solid #f1f3f4;
+  border-radius: 7px;
+  padding: 0.7rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.expense-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.expense-item.income {
+  border-left: 5px solid #27ae60;
+}
+
+.expense-item.expense {
+  border-left: 5px solid #e74c3c;
+}
+
+.expense-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.expense-info h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.expense-amount {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.expense-amount.income {
+  color: #27ae60;
+}
+
+.expense-amount.expense {
+  color: #e74c3c;
+}
+
+.expense-amount.income::before {
+  content: "+";
+}
+
+.expense-amount.expense::before {
+  content: "-";
+}
+
+.expense-date {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.expense-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 1rem;
+  color: #7f8c8d;
+}
+
+.empty-state h3 {
+  font-size: 1rem;
+}
+.empty-state p {
+  font-size: 0.9rem;
+}
+    
+
+/* Error and Success Messages */
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.success {
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #e1e8ed;
+  color: black;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  header {
+    padding: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .form-section {
+    padding: 1rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .balance-section {
+    grid-template-columns: 1fr;
+  }
+
+  .expense-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .expense-actions {
+    align-self: stretch;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .balance-card .amount {
+    font-size: 1.5rem;
+  }
+
+  .expense-actions {
+    flex-direction: column;
+  }
+
+  .btn-cancel {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
