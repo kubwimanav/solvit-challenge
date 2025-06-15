@@ -165,11 +165,13 @@ main {
 }
 
 .btn-delete {
-  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-}
-.btn-delete:hover {
   background: #e8f9e9;
   color: black;
+}
+.btn-delete:hover {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+
 }
 /* Expenses Section */
 .expenses-section {
