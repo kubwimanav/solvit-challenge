@@ -25,14 +25,6 @@ class ExpenseTracker {
       this.updateDisplay();
     });
 
-    document.getElementById("filterDateFrom").addEventListener("change", () => {
-      this.updateDisplay();
-    });
-
-    document.getElementById("filterDateTo").addEventListener("change", () => {
-      this.updateDisplay();
-    });
-
     document.getElementById("sortBy").addEventListener("change", () => {
       this.updateDisplay();
     });
@@ -263,30 +255,14 @@ class ExpenseTracker {
       filtered = filtered.filter((exp) => exp.type === typeFilter);
     }
 
-    // Filter by date range
-    const dateFrom = document.getElementById("filterDateFrom").value;
-    const dateTo = document.getElementById("filterDateTo").value;
-
-    if (dateFrom) {
-      filtered = filtered.filter((exp) => exp.date >= dateFrom);
-    }
-
-    if (dateTo) {
-      filtered = filtered.filter((exp) => exp.date <= dateTo);
-    }
-
     // Sort
     const sortBy = document.getElementById("sortBy").value;
     filtered.sort((a, b) => {
       switch (sortBy) {
         case "date-asc":
           return new Date(a.date) - new Date(b.date);
-        case "date-desc":
-          return new Date(b.date) - new Date(a.date);
         case "amount-asc":
           return a.amount - b.amount;
-        case "amount-desc":
-          return b.amount - a.amount;
         default:
           return new Date(b.date) - new Date(a.date);
       }
